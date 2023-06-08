@@ -1,7 +1,6 @@
-﻿using Guess_the_Number;
-using System;
+﻿using System;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace Guess_the_Number // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
@@ -17,26 +16,26 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine("guess a number between 1 and 99, you get 5 tries, I will tell you if you are higher or lower");
             userinput = Console.ReadLine(); //reads what user gives
             usernmber = Convert.ToInt32(userinput);
-            Console.WriteLine($"the random number is: {therandomnumber} the user input is {userinput} converted number is {usernmber}");
+            //Console.WriteLine($"the random number is: {therandomnumber} the user input is {userinput} converted number is {usernmber}");
             for (int i = 0; i<5; i++)
             {
                 responses = guesser.whereisthenumber(therandomnumber, usernmber);
                 if (responses== "You got it!")
                 {
-                    Console.WriteLine($"Congrats you guessed the number which was {therandomnumber}");
+                    Console.WriteLine($"Congrats you guessed the number which was ");
                     iswin = true;
                     break;
                 }
                 else if (responses=="Higher")
                 {
-                    Console.WriteLine($"Your number {usernmber} is Higher than my number {therandomnumber}");
+                    Console.WriteLine($"Your number {usernmber} is Higher than my number ");
                     Console.WriteLine("try again with another number");
                     userinput = Console.ReadLine();
                     usernmber = Convert.ToInt32(userinput);
                 }
                 else
                 {
-                    Console.WriteLine($"Your number {usernmber} is lower than my number {therandomnumber}");
+                    Console.WriteLine($"Your number {usernmber} is lower than my number ");
                     Console.WriteLine("try again with another number");
                     userinput = Console.ReadLine();
                     usernmber = Convert.ToInt32(userinput);
